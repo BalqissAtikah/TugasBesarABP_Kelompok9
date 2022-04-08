@@ -1,0 +1,66 @@
+#inputRegist {
+    width: 300px; 
+    height: 35px;
+    border-radius: 10px; 
+    padding-left: 18px; 
+    margin-bottom: 20px;
+}
+#inputLogin {
+    width: 300px; 
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 18px; 
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+#loginNregist {
+    margin-top: 75px; 
+    border-radius: 40px; 
+    border: 1px solid black; 
+    background-color: rgba(0, 0, 0, 0.178);
+    height: 450px;
+    width: 420px;
+    margin-left: 450px;
+}
+#img {
+    margin-left: 50px;
+}
+#navbar {
+    background-color: rgba(0, 0, 0, 0.178);
+}
+#btnLogin {
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+#btnRegist {
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    margin-bottom: 5px;
+}
+#nav-tab {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 110px;
+}
+#nav-home-tab, #nav-profile-tab {
+    border-radius: 25px;
+    height: 50px;
+}
+#textLogin, #textRegist {
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+#textLogin {
+    margin-top: 40px;
+}
+#textRegist {
+    margin-top: 30px;
+}
+.line {
+    border-left: 2px black solid;
+    height: 50px;
+    margin-left: 5px;
+}

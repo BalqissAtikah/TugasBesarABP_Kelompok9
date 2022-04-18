@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\infocation;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
@@ -28,7 +29,7 @@ Route::get('/welcome', function () {
 
 
 // by: Arpriansah Y
-// Route::get('/', [infocation::class, 'index']);
+Route::get('/', [infocation::class, 'index']);
 Route::get('/view',[DestinasiController::class, 'index']);
 Route::get('/login', [LoginController::class, 'pageloginregist'])->name('login');
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,9 @@ use App\Http\Controllers\Home;
 Route::get('/home', [Home::class, 'index']);
 Route::get('/destination', function () {
     return view('website');
+});
+Route::get('/welcome', function () {
+    return view('homepage');
 });
 
 

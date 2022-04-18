@@ -1,23 +1,27 @@
 #bagianKanan{
-    background :#f08a8acc;
+    background-color: rgba(92, 158, 215, 0.374);
     height : 400px;
     border-radius : 25px;
     margin-top: 120px;
 }
 .navbar{
-    background :#CE6464CC;
+    background-color: rgba(92, 158, 215, 0.374);
 }
 .scroll-bg{
-    background :#f08a8acc;
+    background-color: rgba(92, 158, 215, 0.374);
     padding : 30px;
     border-radius : 25px;
     margin-top: 120px;
 }
 .scroll-div{
-    width : 550px;
-    background :#c75e5ecc;
+    width : 600px;
+    background-color: rgba(92, 158, 215, 0.374);
     height : 350px;
     overflow : hidden;
     overflow-y: scroll;
     border-radius : 25px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
 }

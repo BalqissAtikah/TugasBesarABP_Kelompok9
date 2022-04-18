@@ -5,6 +5,7 @@ use App\Http\Controllers\Home;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DestinasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::get('/welcome', function () {
 
 
 // by: Arpriansah Y
+// Route::get('/', [infocation::class, 'index']);
+Route::get('/view',[DestinasiController::class, 'index']);
 Route::get('/login', [LoginController::class, 'pageloginregist'])->name('login');
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

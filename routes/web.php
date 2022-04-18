@@ -5,10 +5,6 @@ use App\Http\Controllers\Home;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
-<<<<<<< HEAD
-=======
-use Illuminate\Support\Facades\Route;
->>>>>>> d1849d0b3242f3e6983cb9d528d6173893dd7e23
 
 /*
 |--------------------------------------------------------------------------

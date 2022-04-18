@@ -27,23 +27,30 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                 <div class="container">
-                                    <center>
-                                        <h4 id="textLogin">Login to your account</h4>
-                                        <input type="text" placeholder="Username" name="username" id="inputLogin" method=><br>
-                                        <input type="password" placeholder="Password" name="password" id="inputLogin"><br><br>
-                                        <button type="submit" id="btnLogin" >Submit</button><br>
-                                    </center>
+                                    <form action="{{ route('postlogin') }}" method="POST">
+                                        {{ csrf_field() }}
+                                        <center>
+                                            <h4 id="textLogin">Login to your account</h4>
+                                            <input type="email" placeholder="Email" name="email" id="inputLogin" method=><br>
+                                            <input type="password" placeholder="Password" name="password" id="inputLogin"><br><br>
+                                            <button type="submit" id="btnLogin" >Submit</button><br>
+                                        </center>
+                                    </form>
                                 </div>
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <div class="container">
-                                <center>
-                                    <h4 id="textRegist">Sign up for free</h4>
-                                    <input type="email" placeholder="Email" id="inputRegist">
-                                    <input type="text" placeholder="Username" id="inputRegist">
-                                    <input type="password" placeholder="Password" id="inputRegist"><br>
-                                    <button type="submit" id="btnRegist">Submit</button><br>
-                                </center>
+                                <form action="/register" method="POST">
+                                    {{ csrf_field() }}
+                                    <center>
+                                        <h4 id="textRegist">Sign up for free</h4>
+                                        <input type="text" name="name" placeholder="Username" id="inputRegist">
+                                        <input type="email" name="email" placeholder="Email" id="inputRegist">
+                                        <input type="password" name="password" placeholder="Password" id="inputRegist"><br>
+                                        Login as: <input type="text" name="level" placeholder="'user'" id="inputRegist" style="width: 70px;">
+                                        <button type="submit" id="btnRegist">Submit</button><br>
+                                    </center>
+                                </form>
                             </div>
                         </div>
                     </div>        

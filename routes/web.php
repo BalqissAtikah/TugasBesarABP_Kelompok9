@@ -14,7 +14,7 @@ use App\Http\Controllers\Home;
 |
 */
 
-Route::get('/', [Home::class, 'index']);
+Route::get('/home', [Home::class, 'index']);
 Route::get('/login', function () {
     return view('loginregist');
 });

@@ -4,81 +4,13 @@
         <title>Tubes INFOCATION</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     </head>
-    <style>
-        #inputRegist {
-    width: 300px; 
-    height: 35px;
-    border-radius: 10px; 
-    padding-left: 18px; 
-    margin-bottom: 20px;
-}
-#inputLogin {
-    width: 300px; 
-    height: 35px;
-    border-radius: 10px;
-    padding-left: 18px; 
-    margin-top: 8px;
-    margin-bottom: 20px;
-}
-#loginNregist {
-    margin-top: 75px; 
-    border-radius: 40px; 
-    border: 1px solid black; 
-    background-color: rgba(0, 0, 0, 0.178);
-    height: 450px;
-    width: 420px;
-    margin-left: 450px;
-}
-#img {
-    margin-left: 50px;
-}
-#navbar {
-    background-color: rgba(0, 0, 0, 0.178);
-}
-#btnLogin {
-    border-radius: 10px;
-    width: 100px;
-    height: 35px;
-    margin-bottom: 5px;
-}
-#btnRegist {
-    border-radius: 10px;
-    width: 100px;
-    height: 35px;
-    margin-bottom: 5px;
-}
-#nav-tab {
-    margin-top: 50px;
-    margin-bottom: 10px;
-    margin-left: 110px;
-}
-#nav-home-tab, #nav-profile-tab {
-    border-radius: 25px;
-    height: 50px;
-}
-#textLogin, #textRegist {
-    font-size: x-large;
-    margin-bottom: 20px;
-}
-#textLogin {
-    margin-top: 40px;
-}
-#textRegist {
-    margin-top: 30px;
-}
-.line {
-    border-left: 2px black solid;
-    height: 50px;
-    margin-left: 5px;
-}
-</style>
     <body>
         <nav class="navbar" id="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
+                    <img src="/pics/infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
                 </a>
             </div>
         </nav>

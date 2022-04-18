@@ -5,32 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #bagianKanan{
-            background :#f08a8acc;
-            height : 400px;
-            border-radius : 25px;
-            margin-top: 120px;
-        }
-        .navbar{
-            background :#CE6464CC;
-        }
-        .scroll-bg{
-            background :#f08a8acc;
-            padding : 30px;
-            border-radius : 25px;
-            margin-top: 120px;
-        }
-        .scroll-div{
-            width : 550px;
-            background :#c75e5ecc;
-            height : 350px;
-            overflow : hidden;
-            overflow-y: scroll;
-            border-radius : 25px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="{{asset('/css/destination.css')}}">
 </head>
 <body>
 <meta charset="utf-8">
@@ -42,14 +17,14 @@
     <nav class="navbar navbar-light fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="img.png" width="130" height="55" class="d-inline-block align-text-top" id="img"> 
+            <img src="/pics/infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img"> 
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
-            <img src="img.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
+            <img src="/pics/infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
     <div class="offcanvas-body">

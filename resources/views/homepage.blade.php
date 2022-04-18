@@ -7,193 +7,192 @@
     <title>homepage</title>
   
   </head>
-  <body>
+  <div class="container">
+   <nav class="navbar navbar-light bg-light fixed-top">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-      <nav class="navbar navbar-light bg-light fixed-top">
-          <div class="container-fluid">
-            <img src="infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                  <div class="offcanvas-header">
-                  <img src="infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="container-fluid" id="navbar">
+        <img src="/pics/infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <img src="/pics/infocation.png" width="130" height="55" class="d-inline-block align-text-top" id="img">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
-              <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link active" href="#">Sign-Out</a>
-                      </ul>
+              
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Login</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Destinasi</a>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Sign-Out</a>
                   </ul>
-              <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-              <br><br><br>
-              </div>
+            </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      </div>
+  </nav>
+</div>
+  <main>
+    <link rel="stylesheet" href="{{asset('/css/stylehome.css')}}">
+
+    <div class="container-welcome" id="container-welcome">
+      <h1><b>Welcome to infoCation</b></h1>
+      <p>Descriptionnnnnn!!!!</p>
+    </div>
+
+    <div class="rec-text" id="text-rec">
+      <br><br>
+      <h1><b> Rekomendasi Destinasi Liburan </b></h1>
+    </div>
+
+
+    <div class="container">
+      <div class="slide" style="background-image: url('/pics/bali-hd.jpg');">
+        <h3>Bali</h3>
+      </div>
+
+      <div class="slide" style="background-image: url('/pics/jogja.jpg');">
+        <h3>Jogja</h3>
+      </div>
+
+      <div class="slide" style="background-image: url('/pics/rajaampat.jpg');">
+        <h3>Raja Ampat</h3>
+      </div>
+
+      <div class="slide" style="background-image: url('/pics/bdg.jpg');">
+        <h3>Bandung</h3>
+      </div>
+
+      <div class="slide" style="background-image: url('/pics/bandung.jpg');">
+        <h3>Bandung 2</h3>
+      </div>
+
+    </div>
+    <script>
+    activeslideimg();
+  
+      function activeslideimg(activeSlide = 2) {
+        const slides = document.querySelectorAll(".slide");
+        
+        slides[activeSlide].classList.add("active");
+        
+        for (const slide of slides) {
+            slide.addEventListener("click", () => {
+              clearActiveClasses();
+  
+              slide.classList.add("active");
+          });
+        }
+  
+        function clearActiveClasses() {
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+        }
+      }
+</script>
+</main>
+
+<body>
+  <link rel="stylesheet" href="{{asset('/css/stylesearch.css')}}"/>
+  <center>
+  <br><br>
+  <h3><b> Destinasi Pulau </b></h3>
+  </center>
+   <div class="container" id="container-search">
+      {{-- <h3> Destinasi Pulau </h3> --}}
+      <div class="select-box">
+        <div class="options-container">
+          <div class="option">
+            <input type="radio" class="radio" id="pulaujawa" name="category"/>
+            <label for="pulaujawa">Pulau Jawa</label>
           </div>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+          <div class="option">
+            <input type="radio" class="radio" id="pulaukalimantan" name="category"/>
+            <label for="pulaukalimantan">Pulau Kalimantan</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="pulausulawesi" name="category"/>
+            <label for="pulausulawesi">Pulau Sulawesi</label>
+          </div>
+      
+          <div class="option">
+            <input type="radio" class="radio" id="pulaubali" name="category"/>
+            <label for="pulaubali">Pulau Bali</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="pulausumatera" name="category"/>
+            <label for="pulausumatera">Pulau Sumatera</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="pulaunusatenggara" name="category"/>
+            <label for="pulaunusatenggara">Pulau Nusa Tenggara</label>
+          </div>
+
+          <div class="option">
+            <input type="radio" class="radio" id="pulaumaluku" name="category"/>
+            <label for="pulaumaluku">Pulau Maluku</label>
+          </div>
+        </div>
+        <div class="selected">
+          Select Destinasi
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Start Typing ..."/>
+        </div>
       </div>
-    </nav>
-    <main>
-      <style>
-        * {box-sizing: border-box}
-        body {font-family: Verdana, sans-serif; margin:0}
-        .mySlides {display: flex}
-        img {vertical-align: middle;}
+    </div>
 
-    /* Slideshow container */
-    .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-      overflow: hidden;
-    }
-
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: rgb(255, 249, 249);
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-      opacity: 0.6;
-    }
-
-    /* Caption text */
-    .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
-
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-
-    /* The dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: rgb(232, 135, 135);
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 1s ease;
-    }
-
-    .dot:hover {
-      background-color: #000000;
-    }
-
-    /* Fading animation */
-    .fade {
-      animation-name: fade;
-      animation-duration: 1000s;
-    }
-
-    @keyframes fade {
-      from {opacity: 100} 
-      to {opacity: 100}
-    }
-
-    /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 500px) {
-      .prev, .next,.text {font-size: 11px}
-    }
-</style>
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="jogja.jpg" style="width:100%">
-        <div class="text">Yogyakarta</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="bdg.jpg" style="width:100%">
-        <div class="text">Bandung</div>
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="bali-hd.jpg" style="width:100%">
-        <div class="text">Bali</div>
-      </div>
-      
-      <a class="prev" onclick="plusSlides(-1)">❮</a>
-      <a class="next" onclick="plusSlides(1)">❯</a>
-      
-      </div>
-      <br>
-      
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-      </div>
-    </main>
-      
-      <script>
-      let slideIndex = 1;
-      showSlides(slideIndex);
-      
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
+    <script>
+    const selected = document.querySelector(".selected");
+    const optionsContainer = document.querySelector(".options-container");
+    const searchBox = document.querySelector(".search-box input");
+    
+    const optionsList = document.querySelectorAll(".option");
+    
+    selected.addEventListener("click", () => {
+      optionsContainer.classList.toggle("active");
+    
+      searchBox.value = "";
+      filterList("");
+    
+      if (optionsContainer.classList.contains("active")) {
+        searchBox.focus();
       }
-      
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-      
-      function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
+    });
+    
+    optionsList.forEach(o => {
+      o.addEventListener("click", () => {
+        selected.innerHTML = o.querySelector("label").innerHTML;
+        optionsContainer.classList.remove("active");
+      });
+    });
+    
+    searchBox.addEventListener("keyup", function(e) {
+      filterList(e.target.value);
+    });
+    
+    const filterList = searchTerm => {
+      searchTerm = searchTerm.toLowerCase();
+      optionsList.forEach(option => {
+        let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
+        if (label.indexOf(searchTerm) != -1) {
+          option.style.display = "block";
+        } else {
+          option.style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-      }
-      </script> 
+      });
+    };
+    </script>
   </body>
 </html>

@@ -46,16 +46,25 @@ Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
     //    return view('homeafterlogin');
     //});
     //Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
+<<<<<<< HEAD
     Route::get('/edit', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
     Route::get('/home/edit/{id}', [HomeController::class, 'edit']);
     
+=======
+    // Route::get('/edit', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
+    Route::get('/edit',[DestinasiController::class, 'index'])-> name('destinasiadmin');
+>>>>>>> 76c90f02ab2df328f86a663fcde31a259f0828ec
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], function(){
-    Route::get('/view',[DestinasiController::class, 'index']);
+    Route::get('/view',[DestinasiController::class, 'index'])-> name('destinasiuser');
     Route::get('/home', function () {
         return view('homeafterlogin');
     });
+<<<<<<< HEAD
     Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
     Route::get('/home/update', [HomeController::class, 'update']);
+=======
+    // Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
+>>>>>>> 76c90f02ab2df328f86a663fcde31a259f0828ec
 });

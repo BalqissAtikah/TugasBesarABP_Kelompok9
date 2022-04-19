@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destinasi</title>
     <link rel="stylesheet" href="{{asset('/css/destination.css')}}">
 </head>
 <body>
@@ -41,6 +41,7 @@
 </nav>
 <div class="container">
     
+<<<<<<< HEAD
     <div class="scroll-bg" style="height: 550px">
         <div class="scroll-div" style="width: 32cm; height: 480px"> 
             @foreach ($destinasi as $destinasi)
@@ -56,5 +57,18 @@
             @endforeach
         </div>
     </div>
+=======
+            <div class="scroll-bg" style="height: 550px">
+                <div class="scroll-div" style="width: 32cm; height: 480px"> 
+                                @foreach ($destinasi as $destinasi)
+                                    <td>Nomor :{{$destinasi-> id}} <br></td>
+                                    <td>Nama Destinasi :{{$destinasi-> namadestinasi}}<br></td>
+                                    <td>Lokasi :{{$destinasi-> lokasi}}<br></td>
+                                    <td>Pulau :{{$destinasi-> pulau}}<br></td>
+                                    <td>Deskripsi :<br>{{$destinasi-> deskripsi}}<br><br></td>
+                                @endforeach
+                </div>
+            </div>
+>>>>>>> 76c90f02ab2df328f86a663fcde31a259f0828ec
 </body>
 </html>

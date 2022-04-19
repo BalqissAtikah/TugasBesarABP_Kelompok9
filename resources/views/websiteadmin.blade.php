@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destinasi</title>
     <link rel="stylesheet" href="{{asset('/css/destination.css')}}">
 </head>
 <body>
@@ -43,7 +43,6 @@
     
             <div class="scroll-bg" style="height: 550px">
                 <div class="scroll-div" style="width: 32cm; height: 480px"> 
-                    
                                 @foreach ($destinasi as $destinasi)
                                     <td>Nomor :{{$destinasi-> id}} <br></td>
                                     <td>Nama Destinasi :{{$destinasi-> namadestinasi}}<br></td>

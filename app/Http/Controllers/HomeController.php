@@ -13,6 +13,6 @@ class HomeController extends Controller
         return redirect('/edit');
     }
     public function destinasiuser(){
-        return redirect('/destinasi');
+        return view('website');
     }
 }

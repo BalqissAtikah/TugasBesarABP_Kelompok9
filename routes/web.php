@@ -36,12 +36,12 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
     Route::get('/beranda', [HomeController::class, 'index']);
-    Route::get('/pageadmin', [BerandaController::class, 'destinasiuser'])->name('destinasi');
+    Route::get('/pageadmin', [BerandaController::class, 'destinasiuser'])->name('destinasiuser');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
     Route::get('/beranda', [HomeController::class, 'index']);
-    Route::get('/pageadmin', [HomeController::class, 'destinasiadmin'])->name('destinasi');
+    Route::get('/pageadmin', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], function(){

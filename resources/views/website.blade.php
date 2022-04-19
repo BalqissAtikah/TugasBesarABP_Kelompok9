@@ -40,10 +40,9 @@
 </div>
 </nav>
 <div class="container">
-    <div class="row">
-        <div class= "col-7"> 
-            <div class="scroll-bg">
-                <div class="scroll-div"> 
+            <div class="scroll-bg" style="height: 550px">
+                <div class="scroll-div" style="width: 32cm; height: 480px"> 
+                    
                                 @foreach ($destinasi as $destinasi)
                                     <td>Nomor :{{$destinasi-> id}} <br></td>
                                     <td>Nama Destinasi :{{$destinasi-> namadestinasi}}<br></td>
@@ -53,9 +52,5 @@
                                 @endforeach
                 </div>
             </div>
-        </div>
-        <div class= "col-5" id="bagianKanan"> </div>
-    </div>
-</div>
 </body>
 </html>

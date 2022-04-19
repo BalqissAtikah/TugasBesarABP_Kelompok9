@@ -21,7 +21,7 @@ use App\Http\Controllers\HomeController;
 */
 
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('homepage');
 });
 

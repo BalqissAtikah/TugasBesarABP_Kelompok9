@@ -41,7 +41,7 @@
 
     <div class="container-welcome" id="container-welcome">
       <h1><b>Welcome to infoCation</b></h1>
-      <p>Descriptionnnnnn!!!!</p>
+      <p>Infocation adalah website yang menyediakan informasi destinasi wisata di beberapa daaerah.</p>
     </div>
 
     <div class="rec-text" id="text-rec">

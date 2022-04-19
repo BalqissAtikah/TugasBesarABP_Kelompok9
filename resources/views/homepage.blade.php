@@ -37,7 +37,8 @@
 
     <div class="container-welcome" id="container-welcome">
       <h1><b>Welcome to infoCation</b></h1>
-      <p>Infocation adalah website yang menyediakan informasi destinasi wisata di beberapa daaerah.</p>
+      <p><b>Infocation adalah website yang berfokus untuk<br>
+         menyediakan informasi destinasi wisata di beberapa daaerah.</b></p>
     </div>
   </main>
 </html>

@@ -40,7 +40,9 @@
 </div>
 </nav>
 <div class="container">
+    <a href="{{route(destinasiadmin)}}">
     <button type="submit">Edit</button>
+    </a>
             <div class="scroll-bg" style="height: 550px">
                 <div class="scroll-div" style="width: 32cm; height: 480px"> 
                     

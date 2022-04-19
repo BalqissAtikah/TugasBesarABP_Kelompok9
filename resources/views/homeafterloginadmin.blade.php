@@ -25,7 +25,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
-                    <a class="nav-link active" href="{{route('destinasiuser')}}">Destinasi</a>
+                    <a class="nav-link active" href="{{route('destinasiadmin')}}">Destinasi</a>
                   <li class="nav-item">
                     <a class="nav-link active" href="{{route('logout')}}">Sign-Out</a>
                   </ul>

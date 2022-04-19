@@ -47,6 +47,6 @@ Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
-    Route::get('/beranda', [BerandaController::class, 'index']);
+    Route::get('/beranda', [HomeController::class, 'index']);
     Route::get('/pageadmin', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
 });

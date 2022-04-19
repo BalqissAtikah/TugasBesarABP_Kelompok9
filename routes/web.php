@@ -20,34 +20,30 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/home', [Home::class, 'index']);
-Route::get('/destination', function () {
-    return view('website');
-});
-Route::get('/welcome', function () {
+
+Route::get('/', function () {
     return view('homepage');
 });
 
 
-// by: Arpriansah Y
-// Route::get('/', [infocation::class, 'index']);
-Route::get('/view',[DestinasiController::class, 'index']);
 Route::get('/login', [LoginController::class, 'pageloginregist'])->name('login');
 Route::post('/postlogin', [LoginController::class, 'postlogin'])->name('postlogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Route::get('/beranda', [BerandaController::class, 'index']);
-Route::get('/pageadmin', [BerandaController::class, 'pageadmin'])->name('pageadmin');
-Route::get('/pageuser', [BerandaController::class, 'pageuser'])->name('pageuser');
+
 
 Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
     Route::get('/beranda', [BerandaController::class, 'index']);
-    Route::get('/pageadmin', [BerandaController::class, 'destinasiuser'])->name('destinasiuser');
+    Route::get('/pageadmin', [BerandaController::class, 'destinasiuser'])->name('destinasi');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
     Route::get('/beranda', [HomeController::class, 'index']);
-    Route::get('/pageadmin', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
+    Route::get('/pageadmin', [HomeController::class, 'destinasiadmin'])->name('destinasi');
+});
+
+Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], function(){
+    Route::get('/view',[DestinasiController::class, 'index']);
 });

@@ -40,21 +40,17 @@
 </div>
 </nav>
 <div class="container">
+    
     <div class="scroll-bg" style="height: 550px">
         <div class="scroll-div" style="width: 32cm; height: 480px"> 
-            @foreach ($destinasi as $destinasi)
-                <form action="/home/update" method="POST">
-                    {{csrf_field()}}
-                    <input type="hidden" name="id" value="{{dest->id}}"><br>
-                    <input type="text" name="id" value="{{dest->namadestinasi}}"><br>
-                    <input type="text" name="id" value="{{dest->lokasi}}"><br>
-                    <input type="text" name="id" value="{{dest->pulau}}"><br>
-                    <input type="text" name="id" value="{{dest->deskripsi}}"><br>
-                    <input type="submit" value="Save">                   
-                </form>
-            @endforeach
+                        @foreach ($destinasi as $destinasi)
+                            <td>Nomor :{{$destinasi-> id}} <br></td>
+                            <td>Nama Destinasi :{{$destinasi-> namadestinasi}}<br></td>
+                            <td>Lokasi :{{$destinasi-> lokasi}}<br></td>
+                            <td>Pulau :{{$destinasi-> pulau}}<br></td>
+                            <td>Deskripsi :<br>{{$destinasi-> deskripsi}}<br><br></td>
+                        @endforeach
         </div>
     </div>
-
 </body>
 </html>

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-// use App\Model\Destinasi;
 use App\Models\Destinasi as ModelsDestinasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

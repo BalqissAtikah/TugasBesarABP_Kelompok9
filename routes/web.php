@@ -35,13 +35,21 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 
 Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
-    Route::get('/beranda', [HomeController::class, 'index']);
-    Route::get('/pageadmin', [BerandaController::class, 'destinasiuser'])->name('destinasiuser');
+    Route::get('/home', function () {
+        return view('homeafterlogin');
+    });
+    Route::get('/destinasi', function () {
+        return view('website');
+    })->name('destinasiuser');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
-    Route::get('/beranda', [HomeController::class, 'index']);
-    Route::get('/pageadmin', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
+    Route::get('/home', function () {
+        return view('homeafterlogin');
+    });
+    Route::get('/editdestinasi', function () {
+        return view('websiteadmin');
+    })->name('destinasiadmin');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], function(){

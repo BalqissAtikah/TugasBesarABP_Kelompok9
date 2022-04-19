@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DestinasiController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------

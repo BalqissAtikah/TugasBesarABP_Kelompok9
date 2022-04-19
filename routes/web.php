@@ -38,18 +38,14 @@ Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
     Route::get('/home', function () {
         return view('homeafterlogin');
     });
-    Route::get('/destinasi', function () {
-        return view('website');
-    })->name('destinasiuser');
+    Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
     Route::get('/home', function () {
         return view('homeafterlogin');
     });
-    Route::get('/editdestinasi', function () {
-        return view('websiteadmin');
-    })->name('destinasiadmin');
+    Route::get('/destinasi/edit', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], function(){

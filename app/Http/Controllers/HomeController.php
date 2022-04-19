@@ -12,4 +12,7 @@ class HomeController extends Controller
     public function destinasiadmin(){
         return view('websiteadmin');
     }
+    public function destinasiuser(){
+        return view('website');
+    }
 }

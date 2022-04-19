@@ -35,7 +35,7 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 
 Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
-    Route::get('/beranda', [BerandaController::class, 'index']);
+    Route::get('/beranda', [HomeController::class, 'index']);
     Route::get('/pageadmin', [BerandaController::class, 'destinasiuser'])->name('destinasi');
 });
 

@@ -55,5 +55,5 @@ Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], funct
     Route::get('/home', function () {
         return view('homeafterlogin');
     });
-    // Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 });

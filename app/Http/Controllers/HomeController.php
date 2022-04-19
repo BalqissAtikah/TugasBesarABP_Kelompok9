@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function pagehome(){
-        return view('editartikel');
+    public function destinasiadmin(){
+        return view('websiteadmin');
     }
 }

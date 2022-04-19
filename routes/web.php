@@ -40,3 +40,13 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/beranda', [BerandaController::class, 'index']);
 Route::get('/pageadmin', [BerandaController::class, 'pageadmin'])->name('pageadmin');
 Route::get('/pageuser', [BerandaController::class, 'pageuser'])->name('pageuser');
+
+Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
+    Route::get('/beranda', [BerandaController::class, 'index']);
+    Route::get('/pageadmin', [BerandaController::class, 'destinasiuser'])->name('destinasiuser');
+});
+
+Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
+    Route::get('/beranda', [BerandaController::class, 'index']);
+    Route::get('/pageadmin', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
+});

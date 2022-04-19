@@ -9,10 +9,7 @@ class BerandaController extends Controller
     public function index(){
         return view('homeafterlogin');
     }
-    public function pageuser(){
-        return view('editdestinasi');
-    }
-    public function pageadmin(){
-        return view('dataakun');
+    public function destinasiuser(){
+        return view('website');
     }
 }

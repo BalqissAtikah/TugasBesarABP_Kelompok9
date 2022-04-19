@@ -34,21 +34,25 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 
 
-Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
-    Route::get('/home', function () {
-        return view('homeafterlogin');
-    });
-    Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
-});
+//Route::group(['middleware'=>['auth', 'ceklevel::user']], function(){
+//    Route::get('/home', function () {
+//        return view('homeafterlogin');
+//    });
+//    Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
+//});
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
-    Route::get('/home', function () {
-        return view('homeafterlogin');
-    });
-    Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
+    //Route::get('/home', function () {
+    //    return view('homeafterlogin');
+    //});
+    //Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
     Route::get('/destinasi/edit', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], function(){
     Route::get('/view',[DestinasiController::class, 'index']);
+    Route::get('/home', function () {
+        return view('homeafterlogin');
+    });
+    Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
 });

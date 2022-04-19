@@ -47,6 +47,8 @@ Route::group(['middleware'=>['auth', 'ceklevel::admin']], function(){
     //});
     //Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
     Route::get('/edit', [HomeController::class, 'destinasiadmin'])->name('destinasiadmin');
+    Route::get('/home/edit/{id}', [HomeController::class, 'edit']);
+    
 });
 
 Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], function(){
@@ -55,4 +57,5 @@ Route::group(['middleware'=>['auth', 'ceklevel::admin','ceklevel::user']], funct
         return view('homeafterlogin');
     });
     Route::get('/destinasi', [HomeController::class, 'destinasiuser'])->name('destinasiuser');
+    Route::get('/home/update', [HomeController::class, 'update']);
 });

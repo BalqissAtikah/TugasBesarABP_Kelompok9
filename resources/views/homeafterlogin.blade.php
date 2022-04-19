@@ -69,6 +69,7 @@
 
     </div>
     <script>
+      // referensi = https://youtu.be/4LytvVJaHTs
     activeslideimg();
   
       function activeslideimg(activeSlide = 2) {
@@ -95,6 +96,7 @@
 
 <body>
   <link rel="stylesheet" href="{{asset('/css/stylesearch.css')}}"/>
+  {{-- referensi = https://youtu.be/VZzWzRVXPcQ --}}
   <center>
   <br><br>
   <h3><b> Destinasi Pulau </b></h3>

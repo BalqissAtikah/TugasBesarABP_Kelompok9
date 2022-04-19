@@ -13,7 +13,7 @@ class HomeController extends Controller
         return redirect('/edit');
     }
     public function destinasiuser(){
-        return redirect('/destinasi');
+        return view('website');
     }
     public function simpan(Request $request){
         DB::table('destinasi')->insert([

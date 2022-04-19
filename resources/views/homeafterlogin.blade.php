@@ -104,23 +104,23 @@
       <div class="select-box">
         <div class="options-container">
           <div class="option">
-            <input type="radio" class="radio" id="pulaujawa" name="category"/>
-            <label for="pulaujawa" href="#">Pulau Jawa</label>
+            <input type="radio" class="radio" id="pulaujawa" name="category" href="{{route('destinasiuser')}}"/>
+            <label for="pulaujawa" >Pulau Jawa</label>
           </div>
 
           <div class="option">
-            <input type="radio" class="radio" id="pulausumatera" name="category"/>
-            <label for="pulausumatera">Pulau Kalimantan</label>
+            <input type="radio" class="radio" id="pulausumatera" name="category" href="{{route('destinasiuser')}}"/>
+            <label for="pulausumatera" >Pulau Kalimantan</label>
           </div>
 
           <div class="option">
-            <input type="radio" class="radio" id="pulaupapua" name="category"/>
+            <input type="radio" class="radio" id="pulaupapua" name="category" href="{{route('destinasiuser')}}"/>
             <label for="pulaupapua">Pulau Papua</label>
           </div>
       
           <div class="option">
-            <input type="radio" class="radio" id="pulaubali" name="category"/>
-            <label for="pulaubali">Pulau Bali</label>
+            <input type="radio" class="radio" id="pulaubali" name="category" href="{{route('destinasiuser')}}"/>
+            <label for="pulaubali" >Pulau Bali</label>
           </div>
         </div>
         <div class="selected">
